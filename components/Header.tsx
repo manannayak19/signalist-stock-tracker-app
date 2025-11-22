@@ -6,8 +6,7 @@ import NavItems from "@/components/NavItems";
 import UserDropdown from "@/components/UserDropdown";
 import {useRouter} from "next/navigation";
 
-const Header = () => {
-
+const Header = ({user} : {user: User}) => {
 
     return (
         <header className="sticky top-0 header">
@@ -19,7 +18,8 @@ const Header = () => {
                 {/* navItems*/}
                     <NavItems />
                 </nav>
-                <UserDropdown />
+                <UserDropdown user={user}/>
+
             </div>
         </header>
     )

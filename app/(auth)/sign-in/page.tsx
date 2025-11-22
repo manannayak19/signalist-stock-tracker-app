@@ -4,15 +4,13 @@ import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
 import InputField from '@/components/forms/InputField';
 import FooterLink from '@/components/forms/FooterLink';
-//import {signInWithEmail, signUpWithEmail} from "@/lib/actions/auth.actions";
-//import {toast} from "sonner";
-//import {signInEmail} from "better-auth/api";
+import {signInWithEmail, signUpWithEmail} from "@/lib/actions/auth.actions";
+import {toast} from "sonner";
+import {signInEmail} from "better-auth/api";
 import {useRouter} from "next/navigation";
 
 const SignIn = () => {
-
-    const router = useRouter();
-
+    const router = useRouter()
     const {
         register,
         handleSubmit,
@@ -22,25 +20,27 @@ const SignIn = () => {
             email: '',
             password: '',
         },
-        mode: 'onBlur'
+        mode: 'onBlur',
     });
 
     const onSubmit = async (data: SignInFormData) => {
         try {
-            // const result = await signInWithEmail(data);
-            // if(result.success) router.push('/');
+            const result = await signInWithEmail(data);
+            if(result.success) router.push('/');
         } catch (e) {
             console.error(e);
-            // toast.error('Sign in failed', {
-            //     description: e instanceof Error ? e.message : 'Failed to sign in.'
-            // })
+
+            toast.error('Sign in failed', {
+                //description: e instanceof Error ? e.message : 'Failed to sign in.'
+            })
         }
     }
 
     return (
-        <div>
-            <h1 className="form-title">Sign In</h1>
-            <form onSubmit={handleSubmit(onSubmit)} className='space-y-5'>
+        <>
+            <h1 className="form-title">Welcome back</h1>
+
+            <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
                 <InputField
                     name="email"
                     label="Email"
@@ -66,7 +66,7 @@ const SignIn = () => {
 
                 <FooterLink text="Don't have an account?" linkText="Create an account" href="/sign-up" />
             </form>
-        </div>
-    )
-}
-export default SignIn
+        </>
+    );
+};
+export default SignIn;
