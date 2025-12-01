@@ -26,13 +26,21 @@ const SignIn = () => {
     const onSubmit = async (data: SignInFormData) => {
         try {
             const result = await signInWithEmail(data);
-            if(result.success) router.push('/');
+            if(result.success){
+                toast.success("Signed in successfully.");
+                return router.push('/')
+            } else{
+                toast.error('Sign in failed', {
+                    // result.error assumes your backend returns an error message string
+                    description: 'Invalid credentials.'
+                });
+            }
+
         } catch (e) {
             console.error(e);
-
-            toast.error('Sign in failed', {
-                //description: e instanceof Error ? e.message : 'Failed to sign in.'
-            })
+            toast.error('System error', {
+                description: 'Something went wrong. Please try again.'
+            });
         }
     }
 
