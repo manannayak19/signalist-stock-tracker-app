@@ -15,7 +15,7 @@ export const sendWelcomeEmail = async ({ email, name, intro }: WelcomeEmailData)
         .replace('{{intro}}', intro);
 
     const mailOptions = {
-        from: `"Signalist" <communication@signalist.com>`,
+        from: `"Signalist" <signalist@jsmastery.pro>`,
         to: email,
         subject: `Welcome to Signalist - your stock market toolkit is ready!`,
         text: 'Thanks for joining Signalist',
@@ -25,15 +25,20 @@ export const sendWelcomeEmail = async ({ email, name, intro }: WelcomeEmailData)
     await transporter.sendMail(mailOptions);
 }
 
-export const sendNewsSummaryEmail = async ({ email, date, newsContent }: {email: string, date: string, newsContent: string}): Promise<void> => {
-    const htmlTemplate = NEWS_SUMMARY_EMAIL_TEMPLATE.replace('{{date}}', date).replace('{{newsContent}}', newsContent);
+export const sendNewsSummaryEmail = async (
+    { email, date, newsContent }: { email: string; date: string; newsContent: string }
+): Promise<void> => {
+    const htmlTemplate = NEWS_SUMMARY_EMAIL_TEMPLATE
+        .replace('{{date}}', date)
+        .replace('{{newsContent}}', newsContent);
 
     const mailOptions = {
-        from: `"Signalist" <communication@signalistcom>`,
+        from: `"Signalist News" <signalist@jsmastery.pro>`,
         to: email,
-        subject: `Market News Summary Today - ${date}`,
+        subject: `📈 Market News Summary Today - ${date}`,
         text: `Today's market news summary from Signalist`,
+        html: htmlTemplate,
     };
 
     await transporter.sendMail(mailOptions);
-}
+};
