@@ -21,21 +21,23 @@ Built for investors who value speed and clarity, Signalist aggregates data from 
 
 ## 🛠️ Tech Stack
 
-**Core:**
-![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+## ⚙️ Tech Stack
 
-**Backend & Database:**
-![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
-![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white)
-![Inngest](https://img.shields.io/badge/Inngest-333333?style=for-the-badge&logo=inngest&logoColor=white)
+### **Core Framework & UI**
+- ![Next.js](https://img.shields.io/badge/Next.js-black?style=for-the-badge&logo=next.js&logoColor=white) **Next.js** – A powerful React framework for server-side rendering, static site generation, and API routes.
+- ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white) **TypeScript** – A statically typed superset of JavaScript that enhances code quality, tooling, and error detection.
+- ![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white) **TailwindCSS** – A utility-first CSS framework for building custom, responsive designs directly in your HTML.
+- ![Shadcn](https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white) **Shadcn** – A library of fully customizable, accessible React components for building consistent and beautiful UIs.
 
-**APIs & Services:**
-* **Finnhub:** Financial Data API
-* **Gemini AI:** Generative AI for summaries
-* **TradingView:** Charting Widgets
-* **Nodemailer:** Email Service
+### **Backend & Database**
+- ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) **MongoDB** – A flexible, high-performance NoSQL database for storing data in JSON-like documents.
+- ![Better Auth](https://img.shields.io/badge/Better_Auth-5C2D91?style=for-the-badge&logo=auth0&logoColor=white) **Better Auth** – A framework-agnostic library for handling email/password login, social sign-ons, and multi-factor authentication.
+- ![Nodemailer](https://img.shields.io/badge/Nodemailer-007ACC?style=for-the-badge&logo=minutemailer&logoColor=white) **Nodemailer** – A reliable Node.js library for handling transactional emails and notifications.
+
+### **Cloud, APIs & Tools**
+- ![Inngest](https://img.shields.io/badge/Inngest-333333?style=for-the-badge&logo=inngest&logoColor=white) **Inngest** – A platform for building reliable, event-driven workflows and background jobs like real-time alerts.
+- ![Finnhub](https://img.shields.io/badge/Finnhub-00C7B7?style=for-the-badge&logo=finnhub&logoColor=white) **Finnhub** – A real-time financial data API providing stock, forex, and crypto market data for trading apps.
+- ![CodeRabbit](https://img.shields.io/badge/CodeRabbit-FF5722?style=for-the-badge&logo=rabbit&logoColor=white) **CodeRabbit** – An AI-powered code review assistant that helps catch bugs and enforce best practices via GitHub integration.
 
 ---
 
