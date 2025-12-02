@@ -1,36 +1,83 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📈 Signalist - Intelligent Stock Tracker
 
-## Getting Started
+![Signalist Banner](public/assets/images/dashboard-preview.png)
+---
+**Signalist** is a modern, real-time stock tracking application built with **Next.js 16**. It empowers users to stay ahead of the market with interactive visualizations, AI-curated news summaries, and robust watchlist management.
 
-First, run the development server:
+Built for investors who value speed and clarity, Signalist aggregates data from **Finnhub** and visualizes it using advanced **TradingView** widgets, all wrapped in a sleek, responsive interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 🚀 Key Features
+
+* **📊 Interactive Dashboard:** comprehensive market overview using TradingView widgets, including Real-time Heatmaps, Market Quotes, and Top Stories.
+* **🤖 AI-Powered News:** Leverages **Google Gemini** via **Inngest** to generate concise, daily market news summaries delivered straight to your inbox.
+* **🔍 Smart Search & Tracking:** Instantly search for stocks and add them to your personal watchlist for easy monitoring.
+* **🔐 Secure Authentication:** Robust user management and authentication powered by **Better Auth**.
+* **⚡ Real-Time Data:** Live market data integration using the Finnhub API.
+* **📧 Automated Updates:** Scheduled email reports for sign-ups and daily market digests using **Nodemailer**.
+
+---
+
+## 🛠️ Tech Stack
+
+**Core:**
+![Next.js](https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+**Backend & Database:**
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+![Mongoose](https://img.shields.io/badge/Mongoose-880000?style=for-the-badge&logo=mongoose&logoColor=white)
+![Inngest](https://img.shields.io/badge/Inngest-333333?style=for-the-badge&logo=inngest&logoColor=white)
+
+**APIs & Services:**
+* **Finnhub:** Financial Data API
+* **Gemini AI:** Generative AI for summaries
+* **TradingView:** Charting Widgets
+* **Nodemailer:** Email Service
+
+---
+
+## ⚙️ Environment Variables
+
+To run this project locally, you will need to add the following environment variables to your `.env.local` file:
+
+```env
+# Database
+MONGODB_URI=your_mongodb_connection_string
+
+# Authentication (Better Auth)
+BETTER_AUTH_SECRET=your_generated_secret
+BETTER_AUTH_URL=http://localhost:3000
+
+# APIs
+NEXT_PUBLIC_FINNHUB_API_KEY=your_finnhub_key
+FINNHUB_API_KEY=your_finnhub_key
+GEMINI_API_KEY=your_google_gemini_key
+
+# Email (Nodemailer)
+NODEMAILER_EMAIL=your_email_address
+NODEMAILER_PASSWORD=your_app_specific_password
+```
+---
+
+## 🏃‍♂️ Getting Started
+**Clone the repository:**
+
+```
+git clone [https://github.com/manannayak19/signalist-stock-tracker-app.git](https://github.com/manannayak19/signalist-stock-tracker-app.git)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Install dependencies:**
+```
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Run the development server:**
+```
+npm run dev
+```
+**Open the app: Visit localhost:3000 to view the application locally.**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+<p align="center"> Built with little bit of ❤️ by <a href="https://www.google.com/search?q=https://github.com/manannayak19">Me</a> </p>
